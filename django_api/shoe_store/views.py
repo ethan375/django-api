@@ -6,3 +6,18 @@ from . serializers import ManufactorerSerializer, ShoeTypeSerializer, ShoeColorS
 class ManufactorerViewSet(viewsets.ModelViewSet):
     queryset = Manufactorer.objects.all()
     serializer_class = ManufactorerSerializer
+
+
+class ShoeTypeViewSet(viewsets.ModelViewSet):
+    queryset = ShoeType.objects.all()
+    serializer_class = ShoeTypeSerializer
+
+
+class ShoeColorViewSet(viewsets.ModelViewSet):
+    queryset = ShoeColor.objects.all()
+    serializer_class = ShoeColorSerializer
+
+
+class ShoeViewSet(viewsets.ModelViewSet):
+    queryset = Shoe.objects.all()
+    serializer_class = ShoeSerializer 

@@ -1,6 +1,6 @@
 from django.db import models
 
-# As a young child Joe followed his fathers footsteps in becoming a hunter to survive and keep the his tribe alive. Fortunatley there are plenty of animals that graze on grass that are hard of hearing
+# Joe grew up in the African Savanna hunting lions and doing whatever else badass hunters in the Savanna do
 
 
 class Manufactorer(models.Model):
@@ -20,7 +20,7 @@ class Shoe(models.Model):
     size = models.IntegerField()
     brand_name = models.CharField(max_length=200)
     color = models.ForeignKey(ShoeColor, on_delete=models.CASCADE)
-    Manufactorer = models.ForeignKey(Manufactorer, on_delete=models.CASCADE)
+    manufactorer = models.ForeignKey(Manufactorer, on_delete=models.CASCADE)
     material = models.CharField(max_length=100)
-    ShoeType = models.ForeignKey(ShoeType, on_delete=models.CASCADE)
+    shoe_type = models.ForeignKey(ShoeType, on_delete=models.CASCADE)
     fasten_type = models.CharField(max_length=100)
